@@ -14,6 +14,7 @@ export default function Todo() {
     };
     fetchTodoList();
   }, []);
+
   const onClickHandler = () => {
     setIsOpen(true);
   };
