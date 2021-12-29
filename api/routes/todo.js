@@ -20,8 +20,9 @@ router.post('/', (req, res) => {
   });
 });
 
-router.patch('/', (req, res) => {
-  const { id, title, content } = req.body;
+router.patch('/:id', (req, res) => {
+  const { id } = req.params;
+  const { title, content } = req.body;
   // update <table> set col1 = val1 where ...
   const sql = 'UPDATE TodoList set title=? , content=? where id = ?';
   db.query(sql, [title, content, id], (err, result) => {
@@ -30,8 +31,9 @@ router.patch('/', (req, res) => {
   });
 });
 
-router.delete('/', (req, res) => {
-  const { id } = req.body;
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+  console.log(id);
   const sql = 'DELETE FROM TodoList where id = ?';
   db.query(sql, id, (err, result) => {
     if (err) console.error(err);

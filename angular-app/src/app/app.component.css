@@ -1,0 +1,15 @@
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  padding: 30px;
+  border-radius: 5px;
+}
+.todo-app {
+  display: flex;
+  border: 2px solid black;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
