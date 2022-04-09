@@ -23,7 +23,7 @@ export default function TodoForm({
     resetContent();
   };
   return (
-    <div>
+    <div className="container">
       <label>Title</label>
       <input type="text" {...titleProps} />
       <br />

@@ -49,7 +49,7 @@ export default function Todo() {
     );
   };
   return (
-    <div>
+    <div className="container">
       <h1>Todo Component</h1>
       Todo List <button onClick={onClickHandler}>+</button>
       {isOpen && <TodoForm setIsOpen={setIsOpen} addTodoList={addTodoList} />}
